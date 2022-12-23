@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #090e36;
+    color: white;
+    background-size: cover;
+    font-weight: bold;
+}
+
+.seleccionar-mascota {
+    display: flex;
+    font-family: 'Fredoka One', cursive;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: azure;
+    font-size: 4rem;
+}
+
+.subtitulo {
+    color: azure;
+    font-size: 1.5rem;
+}
+
+.targetaMascota {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    width: 14rem;
+    height: 8rem;
+    background-color: #6C4AB6;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: azure;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.targetaMascota img{
+    width: 90px;
+}
+
+.tarjeta {
+    display: flex;
+    gap: 1rem;
+}
+
+
+input {
+    display: none;
+}
+
+.targetaMascota:hover{
+  background-color: #1098ad;
+}
+
+
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 30px 20px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+}
+
+a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+    -webkit-box-reflect: below 2px
+    linear-gradient(transparent, #0005);
+}
+
+a:nth-child(1){
+    filter: hue-rotate(370deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(170deg);
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 4s linear infinite;
+}
+
+@keyframes animate1 {
+    0%{
+        left: -100%;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 4s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0%{
+        top: -100%;
+    }
+    50%,
+    100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 4s linear infinite;
+}
+
+@keyframes animate3 {
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 4s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-juego {
+    border: none;
+    font-size: 1rem;
+    padding: 0.5em 1.5em;
+    outline: none;
+    color: white;
+    font-style: 1.2em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  }
+  
+  .btn-juego:before,
+  .btn-juego:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+  }
+  
+  .btn-juego:before {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-animation: pulse 10s infinite ease;
+    animation: pulse 10s infinite ease;
+  }
+  
+  .btn-juego:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+  }
+  
+  .btn-juego:hover:before {
+    width: 115%;
+    height: 115%;
+  }
+
+  .btn{
+    display: flex;
+    gap: 2rem;
+  }
+
+  #mensajes{
+    background-color: #1098ad;
+    width: 25rem;
+    padding: 1.1rem;
+    border-radius: 1.3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  .bn53 {
+    border: none;
+    border-radius: 1rem;
+    background-color: #ef4e7b;
+    color: white;
+    padding: 7px;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    animation: bn53bounce 4s infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes bn53bounce {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+  
+    10% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1);
+    }
+  
+    20% {
+      transform: scale(1) rotate(-5deg);
+    }
+  
+    25% {
+      transform: scale(1) rotate(5deg);
+    }
+  
+    30% {
+      transform: scale(1) rotate(-3deg);
+    }
+  
+    35% {
+      transform: scale(1) rotate(2deg);
+    }
+  
+    40% {
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  .ataques{
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 728px){
+    .tarjeta{
+      flex-direction: column;
+    }
+    .titulo{
+      margin: 0.1rem;
+      font-size: 2rem;
+    }
+    .subtitulo{
+      font-size: 1rem;
+    }
+    a{
+      margin: 10px 0;
+      padding: 10px 15px;
+      margin-top: 1.5rem;
+    }
+
+    .btn{
+      flex-direction: column;
+    }
+
+    #mensajes{
+      width: 15rem;
+      padding: 1.1rem;
+      font-size: 1.2rem;
+    }
+
+    .ataques{
+      display: grid;
+      grid-template-columns: 7rem 7rem;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+    }
+  }
