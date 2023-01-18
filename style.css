@@ -45,6 +45,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+
 .targetaMascota img{
     width: 90px;
 }
@@ -59,7 +60,7 @@ input {
     display: none;
 }
 
-.targetaMascota:hover{
+.targetaMascota:active{
   background-color: #1098ad;
 }
 
